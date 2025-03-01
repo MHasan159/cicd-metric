@@ -26,6 +26,7 @@ jobs:
 
       - name: Run tests
         run: |
+          export PYTHONPATH=$(pwd)/app
           pytest tests/
 
       - name: Run Flake8 for code quality
