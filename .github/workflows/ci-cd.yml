@@ -26,9 +26,8 @@ jobs:
 
       - name: Run tests
         run: |
-          pwd
-          ls -l 
-          export PYTHONPATH=$(pwd)/app
+          echo "Current directory: "$(pwd)"
+          export PYTHONPATH=$(pwd)/app:$PYTHONPATH
           pytest tests/
 
       - name: Run Flake8 for code quality
